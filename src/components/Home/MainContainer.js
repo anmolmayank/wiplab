@@ -1,0 +1,62 @@
+import React, { Component } from 'react';
+import {Row, Col, Form,  FormGroup, ControlLabel, Checkbox, Button, FormControl, InputGroup, Glyphicon, Image} from 'react-bootstrap';
+import {
+    Link
+  } from 'react-router-dom';
+import  './style.css';
+
+class MainContainer extends Component {
+
+    render(){
+        return(
+            <div className="container">
+                <Row>
+                <div className="container">
+                    <Col md={8}>
+                            <div className="userForm">
+                                <Form horizontal className="formUser">
+                                    <FormGroup controlId="formHorizontalEmail">
+                                    <Col componentClass={ControlLabel} sm={2}>
+                                        Email
+                                    </Col>
+                                    <Col sm={10}>
+                                        <FormControl type="email" placeholder="Email" />
+                                    </Col>
+                                    </FormGroup>
+                            
+                                    <FormGroup controlId="formHorizontalPassword">
+                                    <Col componentClass={ControlLabel} sm={2}>
+                                        Password
+                                    </Col>
+                                    <Col sm={10}>
+                                        <FormControl type="password" placeholder="Password" />
+                                    </Col>
+                                    </FormGroup>
+                            
+                                    <FormGroup>
+                                    <Col smOffset={2} sm={10}>
+                                        <Checkbox>Remember me</Checkbox>
+                                    </Col>
+                                    </FormGroup>
+                                
+                                    <FormGroup>
+                                    <Col smOffset={2} sm={10}>
+                                        <Button type="submit">
+                                        Sign in
+                                        </Button>
+                                    </Col>
+                                    </FormGroup>
+                            </Form>
+                        </div>
+                    </Col>
+                    <Col md={4}>
+                        <h1>this is second</h1>
+                    </Col>
+                    </div>
+                </Row>
+            </div>
+        );
+    }
+}
+
+export default MainContainer;
